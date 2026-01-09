@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_app/widgets/onboarding.dart';
+import 'package:netflix_app/pages/signin_page.dart';
 
 
 class OnbordingPage extends StatefulWidget {
@@ -31,7 +32,12 @@ class _OnbordingPageState extends State<OnbordingPage> {
             
             )),
             TextButton(
-            onPressed: (){},
+            onPressed: (){
+               Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SigninPage()),
+                        );
+            },
             child: const Text("SIGN IN",
             style: TextStyle(
               color: Colors.white,
@@ -90,7 +96,12 @@ class _OnbordingPageState extends State<OnbordingPage> {
                   Container(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: (){}, 
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SigninPage()),
+                        );
+                      }, 
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
                         foregroundColor: Colors.white,
